@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Maps',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       home: MyHomePage(title: 'Live Tracking'),
     );
@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 200,
               height: 50,
               child: RaisedButton(
-                color: Colors.blue,
+                color: Colors.lightGreen,
                 textColor: Colors.white,
                 shape: new RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(30.0)),
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 200,
                 height: 50,
                 child: RaisedButton(
-                  color: Colors.blue,
+                  color: Colors.lightGreen,
                   textColor: Colors.white,
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(30.0)),
