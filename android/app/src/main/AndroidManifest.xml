@@ -11,7 +11,7 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="flutter_maps"
+        android:label="Thrissur"
         android:icon="@mipmap/ic_launcher">
         <meta-data android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBA34RuOsuWchWG98SjuIRSlMvwkB_MBR0"/>
