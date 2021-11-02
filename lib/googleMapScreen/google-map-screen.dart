@@ -23,7 +23,8 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
   );
 
   Future<Uint8List> getMarker() async {
-    ByteData byteData = await DefaultAssetBundle.of(context).load("assets/car_icon.png");
+    ByteData byteData =
+        await DefaultAssetBundle.of(context).load("assets/car_icon.png");
     return byteData.buffer.asUint8List();
   }
 
@@ -51,7 +52,6 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
 
   void getCurrentLocation() async {
     try {
-
       Uint8List imageData = await getMarker();
       var location = await _locationTracker.getLocation();
 
@@ -61,18 +61,18 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
         _locationSubscription.cancel();
       }
 
-
-      _locationSubscription = _locationTracker.onLocationChanged().listen((newLocalData) {
+      _locationSubscription =
+          _locationTracker.onLocationChanged().listen((newLocalData) {
         if (_controller != null) {
-          _controller.animateCamera(CameraUpdate.newCameraPosition(new CameraPosition(
-              bearing: 192.8334901395799,
-              target: LatLng(newLocalData.latitude, newLocalData.longitude),
-              tilt: 0,
-              zoom: 18.00)));
+          _controller.animateCamera(CameraUpdate.newCameraPosition(
+              new CameraPosition(
+                  bearing: 192.8334901395799,
+                  target: LatLng(newLocalData.latitude, newLocalData.longitude),
+                  tilt: 0,
+                  zoom: 18.00)));
           updateMarkerAndCircle(newLocalData, imageData);
         }
       });
-
     } on PlatformException catch (e) {
       if (e.code == 'PERMISSION_DENIED') {
         debugPrint("Permission Denied");
@@ -92,7 +92,7 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Goole Map Screen'),
+        title: Text('Google Map Screen'),
       ),
       body: GoogleMap(
         mapType: MapType.normal,
@@ -102,7 +102,6 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
         onMapCreated: (GoogleMapController controller) {
           _controller = controller;
         },
-
       ),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.location_searching),
