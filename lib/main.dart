@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Maps',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        brightness: Brightness.dark,
+        primaryColor: Colors.green[800],
       ),
       home: MyHomePage(title: 'Live Tracking'),
     );
@@ -34,6 +35,13 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
+        //use Container for back-image
+        //decoration: BoxDecoration(
+        // image: DecorationImage(
+        // image: AssetImage("assets/gps_icon.png"),
+        // fit: BoxFit.cover,
+        // ),
+        //),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
