@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
-
 import 'package:flutter_maps/liveTrackigUtils/maps_receiver.dart';
 
 class ChooseDevice extends StatefulWidget {
@@ -11,7 +10,6 @@ class ChooseDevice extends StatefulWidget {
 }
 
 class ChooseDeviceState extends State<ChooseDevice> {
-
   static final databaseReference = FirebaseDatabase.instance.reference();
 
   static double currentLatitude = 0.0;
@@ -34,11 +32,11 @@ class ChooseDeviceState extends State<ChooseDevice> {
   }
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
-    databaseReference.once().then((DataSnapshot snapshot){
+    databaseReference.once().then((DataSnapshot snapshot) {
       Map<dynamic, dynamic> values = snapshot.value;
-      values.forEach((key,values) {
+      values.forEach((key, values) {
         setState(() {
           list.add(key);
         });
@@ -46,11 +44,8 @@ class ChooseDeviceState extends State<ChooseDevice> {
     });
   }
 
-
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
         appBar: AppBar(title: const Text('Choose device to track')),
         body: ListView.builder(
@@ -59,7 +54,9 @@ class ChooseDeviceState extends State<ChooseDevice> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MapsReceiver(deviceid: list[index])),
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            MapsReceiver(deviceid: list[index])),
                   );
                 },
                 child: Card(
@@ -67,12 +64,11 @@ class ChooseDeviceState extends State<ChooseDevice> {
                     padding: EdgeInsets.all(8.0),
                     height: 50,
                     width: 240,
-                    child: Text('Device ID : '+list[index]),
+                    child: Text('Device ID : ' + list[index]),
                   ),
                 ),
               );
             },
-            itemCount: list.length)
-    );
+            itemCount: list.length));
   }
 }
