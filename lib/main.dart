@@ -34,38 +34,19 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
+      body: Container(
         //use Container for back-image
-        //decoration: BoxDecoration(
-        // image: DecorationImage(
-        // image: AssetImage("assets/gps_icon.png"),
-        // fit: BoxFit.cover,
-        // ),
-        //),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(
-              width: 200,
-              height: 50,
-              child: RaisedButton(
-                color: Colors.lightGreen,
-                textColor: Colors.white,
-                shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(30.0)),
-                child: Text("Google Map screen"),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => GoogleMapScreen()));
-                },
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-            ),
-            SizedBox(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/gps_icon.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(
                 width: 200,
                 height: 50,
                 child: RaisedButton(
@@ -73,13 +54,36 @@ class _MyHomePageState extends State<MyHomePage> {
                   textColor: Colors.white,
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(30.0)),
-                  child: Text("Live tracking"),
+                  child: Text("Google Map screen"),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ChooseUser()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => GoogleMapScreen()));
                   },
-                ))
-          ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+              ),
+              SizedBox(
+                  width: 200,
+                  height: 50,
+                  child: RaisedButton(
+                    color: Colors.lightGreen,
+                    textColor: Colors.white,
+                    shape: new RoundedRectangleBorder(
+                        borderRadius: new BorderRadius.circular(30.0)),
+                    child: Text("Live tracking"),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ChooseUser()));
+                    },
+                  ))
+            ],
+          ),
         ),
       ),
     );
