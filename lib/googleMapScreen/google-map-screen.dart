@@ -108,6 +108,7 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
           onPressed: () {
             getCurrentLocation();
           }),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

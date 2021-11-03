@@ -36,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
       //backgroundColor: Colors.black,
       //),
       body: Container(
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
         //use Container for back-image
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -48,14 +49,17 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               SizedBox(
-                          width: double.infinity,
+                width: double.infinity,
                 height: 55,
                 child: RaisedButton(
-                  color: Colors.orange,
+                  color: Colors.brown,
                   textColor: Colors.white,
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(5.0)),
-                  child: Text("Google Map screen"),
+                  child: Text(
+                    "GOOGLE MAP SCREEN",
+                    style: TextStyle(fontSize: 20),
+                  ),
                   onPressed: () {
                     Navigator.push(
                         context,
@@ -68,14 +72,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: const EdgeInsets.all(8.0),
               ),
               SizedBox(
-                          width: double.infinity,
+                  width: double.infinity,
                   height: 55,
                   child: RaisedButton(
-                    color: Colors.orange,
+                    color: Colors.brown,
                     textColor: Colors.white,
                     shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(5.0)),
-                    child: Text("Live tracking"),
+                    child: Text(
+                      "LIVE TRACKING",
+                      style: TextStyle(fontSize: 20),
+                    ),
                     onPressed: () {
                       Navigator.push(
                           context,
