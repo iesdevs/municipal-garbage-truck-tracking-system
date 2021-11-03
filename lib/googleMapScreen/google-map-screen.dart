@@ -105,9 +105,11 @@ class _GoogleMapScreenState extends State<GoogleMapScreen> {
       ),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.location_searching),
+          backgroundColor: Colors.orange,
           onPressed: () {
             getCurrentLocation();
           }),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }
