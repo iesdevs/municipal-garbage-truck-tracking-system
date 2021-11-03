@@ -39,8 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
         //use Container for back-image
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/image.jpg"),
-            fit: BoxFit.scaleDown,
+            image: AssetImage("assets/pexels1.jpg"),
+            fit: BoxFit.fill,
           ),
         ),
         child: Center(

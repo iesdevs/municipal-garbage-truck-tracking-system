@@ -24,7 +24,8 @@ class MapsReceiverState extends State<MapsReceiver> {
 
   StreamSubscription subscription;
 
-  LocationData currentLocation = LocationData.fromMap({'latitude':0.0, 'longitude':0.0});
+  LocationData currentLocation =
+      LocationData.fromMap({'latitude': 0.0, 'longitude': 0.0});
   StreamSubscription<LocationData> locationSubcription;
 
   Location location = new Location();
@@ -43,10 +44,8 @@ class MapsReceiverState extends State<MapsReceiver> {
   void initState() {
     super.initState();
 
-    subscription = databaseReference
-        .child(widget.deviceid)
-        .onValue
-        .listen((event) {
+    subscription =
+        databaseReference.child(widget.deviceid).onValue.listen((event) {
       setState(() {
         currentLatitude = event.snapshot.value['latitude'];
         currentLongitude = event.snapshot.value['longitude'];
@@ -95,7 +94,7 @@ class MapsReceiverState extends State<MapsReceiver> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Reciver')),
+        appBar: AppBar(title: const Text('Receiver')),
         body: Padding(
           padding: EdgeInsets.all(0),
           child: Column(
