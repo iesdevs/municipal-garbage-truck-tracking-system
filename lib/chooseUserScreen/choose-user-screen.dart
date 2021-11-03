@@ -10,6 +10,7 @@ class ChooseUser extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text('Google Maps Flutter')),
+        backgroundColor: Colors.black,
         body: Builder(
           builder: (context) => Center(
             child: Column(
@@ -19,7 +20,7 @@ class ChooseUser extends StatelessWidget {
                   width: 200,
                   height: 50,
                   child: RaisedButton(
-                    color: Colors.blue,
+                    color: Colors.orange,
                     textColor: Colors.white,
                     shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(30.0)),
@@ -39,7 +40,7 @@ class ChooseUser extends StatelessWidget {
                     width: 200,
                     height: 50,
                     child: RaisedButton(
-                      color: Colors.blue,
+                      color: Colors.orange,
                       textColor: Colors.white,
                       shape: new RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(30.0)),
