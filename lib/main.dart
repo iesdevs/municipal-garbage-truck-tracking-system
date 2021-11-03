@@ -33,13 +33,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        backgroundColor: Colors.black,
       ),
       body: Container(
         //use Container for back-image
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/gps_icon.png"),
-            fit: BoxFit.cover,
+            image: AssetImage("assets/image.jpg"),
+            fit: BoxFit.scaleDown,
           ),
         ),
         child: Center(
@@ -50,7 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 200,
                 height: 50,
                 child: RaisedButton(
-                  color: Colors.lightGreen,
+                  color: Colors.orange,
                   textColor: Colors.white,
                   shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(30.0)),
@@ -70,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: 200,
                   height: 50,
                   child: RaisedButton(
-                    color: Colors.lightGreen,
+                    color: Colors.orange,
                     textColor: Colors.white,
                     shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(30.0)),
