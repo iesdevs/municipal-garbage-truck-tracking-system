@@ -9,9 +9,16 @@ class ChooseUser extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Google Maps Flutter')),
-        backgroundColor: Colors.black,
-        body: Builder(
+      appBar: AppBar(title: const Text('Google Maps Flutter')),
+      backgroundColor: Colors.black,
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/pexels3.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Builder(
           builder: (context) => Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -56,6 +63,8 @@ class ChooseUser extends StatelessWidget {
               ],
             ),
           ),
-        ));
+        ),
+      ),
+    );
   }
 }

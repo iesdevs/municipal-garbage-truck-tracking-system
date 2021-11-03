@@ -31,10 +31,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        backgroundColor: Colors.black,
-      ),
+      //appBar: AppBar(
+      //title: Text(widget.title),
+      //backgroundColor: Colors.black,
+      //),
       body: Container(
         //use Container for back-image
         decoration: BoxDecoration(
@@ -45,16 +45,16 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
               SizedBox(
-                width: 200,
-                height: 50,
+                          width: double.infinity,
+                height: 55,
                 child: RaisedButton(
                   color: Colors.orange,
                   textColor: Colors.white,
                   shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(30.0)),
+                      borderRadius: new BorderRadius.circular(5.0)),
                   child: Text("Google Map screen"),
                   onPressed: () {
                     Navigator.push(
@@ -68,13 +68,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 padding: const EdgeInsets.all(8.0),
               ),
               SizedBox(
-                  width: 200,
-                  height: 50,
+                          width: double.infinity,
+                  height: 55,
                   child: RaisedButton(
                     color: Colors.orange,
                     textColor: Colors.white,
                     shape: new RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(30.0)),
+                        borderRadius: new BorderRadius.circular(5.0)),
                     child: Text("Live tracking"),
                     onPressed: () {
                       Navigator.push(
