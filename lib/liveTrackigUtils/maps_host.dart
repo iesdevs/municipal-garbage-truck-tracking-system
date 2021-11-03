@@ -127,6 +127,7 @@ class MapsHostState extends State<MapsHost> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text('Host')),
+        backgroundColor: Colors.grey[800],
         body: Builder(
             builder: (context) => Padding(
                   padding: EdgeInsets.all(0),
@@ -135,7 +136,7 @@ class MapsHostState extends State<MapsHost> {
                       Container(
                         child: SizedBox(
                           width: double.infinity,
-                          height: 420.0,
+                          height: 650.0,
                           child: GoogleMap(
                             markers: Set<Marker>.of(markers.values),
                             initialCameraPosition: CameraPosition(
