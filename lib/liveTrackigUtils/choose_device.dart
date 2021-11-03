@@ -61,10 +61,14 @@ class ChooseDeviceState extends State<ChooseDevice> {
                 },
                 child: Card(
                   child: Container(
-                    padding: EdgeInsets.all(8.0),
                     height: 50,
                     width: 240,
-                    child: Text('Device ID : ' + list[index]),
+                    child: RaisedButton(
+                      textColor: Colors.white,
+                      shape: new RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(5.0)),
+                      child: Text('Device ID : ' + list[index]),
+                    ),
                   ),
                 ),
               );

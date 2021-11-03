@@ -24,10 +24,10 @@ class ChooseUser extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(
-                  width: 200,
-                  height: 50,
+                  width: double.infinity,
+                  height: 55,
                   child: RaisedButton(
-                    color: Colors.orange,
+                    color: Colors.black26,
                     textColor: Colors.white,
                     shape: new RoundedRectangleBorder(
                         borderRadius: new BorderRadius.circular(30.0)),
@@ -44,10 +44,10 @@ class ChooseUser extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                 ),
                 SizedBox(
-                    width: 200,
-                    height: 50,
+                    width: double.infinity,
+                    height: 55,
                     child: RaisedButton(
-                      color: Colors.orange,
+                      color: Colors.black26,
                       textColor: Colors.white,
                       shape: new RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(30.0)),
