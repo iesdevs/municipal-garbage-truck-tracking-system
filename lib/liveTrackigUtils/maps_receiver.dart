@@ -95,6 +95,7 @@ class MapsReceiverState extends State<MapsReceiver> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text('Receiver')),
+        backgroundColor: Colors.grey[800],
         body: Padding(
           padding: EdgeInsets.all(0),
           child: Column(
@@ -102,7 +103,7 @@ class MapsReceiverState extends State<MapsReceiver> {
               Container(
                 child: SizedBox(
                   width: double.infinity,
-                  height: 420.0,
+                  height: 650.0,
                   child: GoogleMap(
                     markers: Set<Marker>.of(markers.values),
                     initialCameraPosition: CameraPosition(
